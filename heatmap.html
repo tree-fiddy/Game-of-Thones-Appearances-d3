@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://bl.ocks.org/officeofjane/11b54880abcb6b844637cb1d7a120cd5-->
+<!--Tried using the link above... to no success, but borrowed a lot of the concepts-->
+<head>
+    <meta charset="UTF-8">
+    <title>Q4</title>
+    <script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+    <!-- For some reason, async is very necessary -->
+    <script type="text/javascript" src="heatmap.js" async></script>
+    <style>
+        html {
+        font-size: 62.5%;
+        }
+
+        body {
+          margin-top: 30px;
+          font-size: 1.4rem;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400;
+          fill: #696969;
+          text-align: center;
+        }
+        .label {
+          font-weight: bold;
+        }
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+        .episodeLabel, .charLabel {
+                font-size: 1.6rem;
+                fill: #AAAAAA;
+                font-weight: 400;
+            }
+
+        #heatmap {
+            display: flex;
+            justify-content: center;
+        }
+
+        #nav-container {
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body onload="init()">
+<div id="nav-container">
+    <div id="seasonDropdown"> Season </div>
+</div>
+<div id="heatmap" class="svg-container"></div>
+</body>
+
+</html>
